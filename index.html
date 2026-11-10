@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Margaret Muthoni | Financial and Programme Analyst</title>
+<meta name="description" content="Financial and programme analyst in Nairobi. Two years of donor-funded programme audit at PwC Kenya, now building Power BI and SQL case studies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:#f2f5f7; --ink:#13232b; --muted:#4d6069; --teal:#0d6a6a; --teal-dark:#094d4d; --rule:#cfd9de;
+    --display:"Bricolage Grotesque","Segoe UI",Arial,sans-serif; --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--body); font-size:1.125rem; line-height:1.65; }
+  a { color:var(--teal-dark); text-underline-offset:3px; }
+  a:hover { color:var(--teal); }
+  :focus-visible { outline:3px solid var(--teal); outline-offset:3px; }
+  .wrap { max-width:62rem; margin:0 auto; padding:0 1.5rem; }
+  .narrow { max-width:44rem; }
+
+  header.top { padding:1.5rem 0; }
+  header.top .wrap { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:.75rem; }
+  .brand { font-family:var(--display); font-weight:700; font-size:1.05rem; text-decoration:none; color:var(--ink); }
+  nav a { font-family:var(--display); font-weight:500; font-size:.98rem; margin-left:1.25rem; text-decoration:none; color:var(--muted); }
+  nav a:hover { color:var(--teal); text-decoration:underline; }
+
+  .hero { padding:3.5rem 0 4rem; display:grid; grid-template-columns:1fr; gap:2.5rem; align-items:center; }
+  .hero.has-portrait { grid-template-columns:1.4fr 1fr; }
+  .portrait { width:100%; max-width:22rem; aspect-ratio:4/5; object-fit:cover; border-radius:6px; justify-self:center; }
+  h1 { font-family:var(--display); font-weight:700; font-size:clamp(2.3rem,6vw,3.7rem); line-height:1.06; letter-spacing:-.02em; margin:0 0 .6rem; }
+  .role { font-family:var(--display); font-weight:500; font-size:1.35rem; color:var(--teal-dark); margin:0 0 1rem; }
+  .lede { font-size:1.2rem; color:var(--muted); max-width:34rem; margin:0 0 1.5rem; }
+  .actions { display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.5rem; }
+  .btn { font-family:var(--display); font-weight:700; font-size:1rem; padding:.7rem 1.25rem; border-radius:4px; text-decoration:none; border:2px solid var(--teal); background:var(--teal); color:#fff; }
+  .btn:hover { background:var(--teal-dark); border-color:var(--teal-dark); color:#fff; }
+  .btn.alt { background:transparent; color:var(--teal-dark); }
+  .btn.alt:hover { background:#e3edef; color:var(--teal-dark); }
+
+  section { padding:3rem 0; border-top:1px solid var(--rule); }
+  h2 { font-family:var(--display); font-size:1.7rem; letter-spacing:-.01em; margin:0 0 1.25rem; }
+  h3 { font-family:var(--display); font-size:1.15rem; margin:0 0 .3rem; }
+  p { margin:0 0 1rem; }
+  .meta { color:var(--muted); font-size:1rem; }
+
+  .chips { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.5rem; }
+  .chips li { border:1px solid var(--rule); background:#fff; padding:.25rem .8rem; border-radius:4px; font-size:1rem; }
+
+  .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:1.75rem 2rem; }
+  .services p { color:var(--muted); font-size:1.02rem; margin:0; }
+
+  ul.creds { list-style:none; margin:0; padding:0; }
+  ul.creds li { position:relative; padding:.45rem 0 .45rem 2rem; }
+  ul.creds li::before { content:""; position:absolute; left:0; top:.78rem; width:1.05rem; height:1.05rem; border:2px solid var(--teal); border-radius:3px; }
+  ul.creds li.done::before { background:var(--teal); }
+  ul.creds li.done::after { content:""; position:absolute; left:.36rem; top:.86rem; width:.3rem; height:.58rem; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(40deg); }
+  .legend { font-size:.95rem; color:var(--muted); margin-top:1rem; }
+
+  .cert-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(16rem,1fr)); gap:1.5rem; margin-top:2rem; }
+  .cert-grid figure { margin:0; }
+  .cert-grid img { width:100%; height:auto; display:block; border:1px solid var(--rule); border-radius:4px; background:#fff; }
+  .cert-grid figcaption { font-size:.95rem; color:var(--muted); margin-top:.4rem; }
+  .project-note { border-left:4px solid var(--teal); padding:.25rem 0 .25rem 1rem; max-width:40rem; }
+
+  footer { padding:3rem 0 3.5rem; border-top:1px solid var(--rule); }
+  footer ul { margin:0 0 1.25rem 1.1rem; padding:0; }
+  .small { color:var(--muted); font-size:.95rem; margin-top:2rem; }
+
+  @media (max-width:46rem) { .hero.has-portrait { grid-template-columns:1fr; } .portrait { max-width:16rem; justify-self:start; } nav a { margin:0 1rem 0 0; } }
+  @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home">Margaret Muthoni</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#what-i-do">What I do</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <div class="wrap">
+    <div class="hero has-portrait" id="hero">
+      <div>
+        <h1>Margaret Muthoni</h1>
+        <p class="role">Financial and Programme Analyst</p>
+        <p class="lede">I test where money goes and show what it delivers.</p>
+        <ul class="chips" aria-label="Tools">
+          <li>Power BI</li><li>SQL</li><li>Advanced Excel</li><li>Financial modelling</li>
+        </ul>
+        <div class="actions">
+          <a class="btn" href="#portfolio">Explore my work</a>
+          <a class="btn alt" href="cv.pdf">Download my CV</a>
+        </div>
+      </div>
+      <!-- Add a file named portrait.jpg to the repo to show your photo. Without it, this is hidden. -->
+      <img class="portrait" src="portrait.jpg" alt="Portrait of Margaret Muthoni" onerror="this.remove();document.getElementById('hero').classList.remove('has-portrait');">
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section id="about">
+      <div class="narrow">
+        <h2>About</h2>
+        <p>I spent two years in assurance at PwC Kenya, auditing donor-funded and public sector programmes. I tested expenditure and procurement against evidence, followed up exceptions, and reported control weaknesses to management. As a senior associate I led audit teams of 3 to 5 people.</p>
+        <p>That work left me with one habit: I want to know what happened to the money after it was approved, and whether it did what it was meant to do. Data tools let me answer that faster and show it more clearly.</p>
+        <p>I pair that background with Power BI, SQL and advanced Excel, and I'm building case studies that turn programme and financial data into dashboards people can act on. I'm based in Nairobi and looking for financial analyst, programme analytics and MEL roles with development organisations and NGOs.</p>
+      </div>
+    </section>
+
+    <section id="what-i-do">
+      <h2>What I do</h2>
+      <div class="services">
+        <div><h3>Financial and programme analysis</h3><p>Compare budgets with actual spend, find variances, and explain what is driving them.</p></div>
+        <div><h3>Audit and assurance</h3><p>Test transactions against supporting evidence, investigate exceptions and report control weaknesses.</p></div>
+        <div><h3>Dashboards and reporting</h3><p>Build Power BI and Excel reports that let managers monitor KPIs and spot problems early.</p></div>
+        <div><h3>Data cleaning and validation</h3><p>Reconcile records and fix inconsistencies with Power Query and Excel so the analysis can be trusted.</p></div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>A summary of my experience, education and technical skills.</p>
+      <a class="btn" href="cv.pdf">Download my CV</a>
+    </section>
+
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <!-- When project 1 is live, replace this block with a project block (image, title, description, link). -->
+      <div class="project-note">
+        <p>My first case study is a budget versus actual dashboard for donor-funded programmes, built on public data. It will include the live report and a short video walkthrough.</p>
+        <p class="meta">Publishing: December 2026</p>
+      </div>
+    </section>
+
+    <section id="credentials">
+      <h2>Education and credentials</h2>
+      <ul class="creds">
+        <li class="done">Bachelor of Economics and Statistics, University of Nairobi (2022)</li>
+        <li class="done">Financial Modeling and Valuation Analyst (FMVA), Corporate Finance Institute</li>
+        <li class="done">Data Analytics Programme, ALX Africa (2024)</li>
+        <li class="done">Introduction to Data Protection, Strathmore University CIPIT (2026)</li>
+        <li>CPA(K), KASNEB: Intermediate Level in progress</li>
+      </ul>
+      <p class="legend">A filled box means completed. An empty box means in progress.</p>
+      <!-- Certificate images: put PNG or JPG files in a folder named certificates in the repo, named exactly as below. Missing files are hidden. -->
+      <div class="cert-grid">
+        <figure data-cert><img src="certificates/fmva.png" alt="FMVA certificate from Corporate Finance Institute" loading="lazy"><figcaption>FMVA, Corporate Finance Institute</figcaption></figure>
+        <figure data-cert><img src="certificates/alx-data-analytics.png" alt="Data Analytics Programme certificate from ALX Africa" loading="lazy"><figcaption>Data Analytics Programme, ALX Africa</figcaption></figure>
+        <figure data-cert><img src="certificates/strathmore-data-protection.png" alt="Introduction to Data Protection certificate from Strathmore University" loading="lazy"><figcaption>Introduction to Data Protection, Strathmore University</figcaption></figure>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="narrow">
+      <h2>Let's talk about your data.</h2>
+      <p>If you have programme or financial data that needs a clearer answer, I'd like to hear about it.</p>
+      <ul>
+        <li>Financial and programme analysis</li>
+        <li>Power BI and Excel dashboards</li>
+        <li>Data cleaning and reporting</li>
+      </ul>
+      <p>Email: <a href="mailto:margaret_muthoni@outlook.com">margaret_muthoni@outlook.com</a><br>
+      LinkedIn: <a href="https://www.linkedin.com/in/margaret-nyambura/">linkedin.com/in/margaret-nyambura</a><br>
+      Based in Nairobi, Kenya</p>
+      <p class="small">&copy; 2026 Margaret Muthoni</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Certificate images: try .png, then .jpg, then hide the card if neither exists.
+  document.querySelectorAll('[data-cert] img').forEach(function (img) {
+    img.addEventListener('error', function () {
+      if (!img.dataset.retried) {
+        img.dataset.retried = '1';
+        img.src = img.getAttribute('src').replace(/\.png$/, '.jpg');
+      } else {
+        img.closest('figure').remove();
+      }
+    });
+  });
+</script>
+</body>
+</html>
