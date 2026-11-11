@@ -4,192 +4,262 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Margaret Muthoni | Financial and Programme Analyst</title>
-<meta name="description" content="Financial and programme analyst in Nairobi. Two years of donor-funded programme audit at PwC Kenya, now building Power BI and SQL case studies.">
+<meta name="description" content="Margaret Muthoni, financial and programme analyst in Nairobi. Power BI, SQL and Excel.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper:#f2f5f7; --ink:#13232b; --muted:#4d6069; --teal:#0d6a6a; --teal-dark:#094d4d; --rule:#cfd9de;
-    --display:"Bricolage Grotesque","Segoe UI",Arial,sans-serif; --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+    --nav:#05142b; --deep:#051a35; --navy:#0a2850; --blue:#0f3f73; --light:#f1f6ff;
+    --brand:#0b559b; --ring:#456ba3; --sky:#63b8f5; --soft:#b8cbe6; --ink:#061a33;
+    --line:rgba(255,255,255,.16);
+    --font:"Space Grotesk","Segoe UI",Arial,sans-serif;
+    --arrow-right:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 12h17M14 6l6 6-6 6'/%3E%3C/svg%3E");
+    --arrow-down:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v17M6 14l6 6 6-6'/%3E%3C/svg%3E");
   }
   * { box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--body); font-size:1.125rem; line-height:1.65; }
-  a { color:var(--teal-dark); text-underline-offset:3px; }
-  a:hover { color:var(--teal); }
-  :focus-visible { outline:3px solid var(--teal); outline-offset:3px; }
-  .wrap { max-width:62rem; margin:0 auto; padding:0 1.5rem; }
-  .narrow { max-width:44rem; }
+  html { scroll-padding-top:4.5rem; }
+  body { margin:0; font-family:var(--font); font-size:1.05rem; line-height:1.7; color:#fff; background:var(--deep); }
+  a { color:inherit; }
+  :focus-visible { outline:3px solid var(--sky); outline-offset:3px; }
+  .wrap { max-width:60rem; margin:0 auto; padding:0 1.5rem; }
+  .wide { max-width:70rem; margin:0 auto; padding:0 1.5rem; }
 
-  header.top { padding:1.5rem 0; }
-  header.top .wrap { display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:.75rem; }
-  .brand { font-family:var(--display); font-weight:700; font-size:1.05rem; text-decoration:none; color:var(--ink); }
-  nav a { font-family:var(--display); font-weight:500; font-size:.98rem; margin-left:1.25rem; text-decoration:none; color:var(--muted); }
-  nav a:hover { color:var(--teal); text-decoration:underline; }
+  /* Navigation */
+  .nav { position:sticky; top:0; z-index:10; background:var(--nav); border-bottom:1px solid rgba(255,255,255,.08); }
+  .nav ul { list-style:none; margin:0 auto; padding:1.15rem 1rem; display:flex; justify-content:center; flex-wrap:wrap; gap:.5rem 2.6rem; }
+  .nav a { text-decoration:none; font-size:.8rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#fff; }
+  .nav a:hover { color:var(--sky); }
 
-  .hero { padding:3.5rem 0 4rem; display:grid; grid-template-columns:1fr; gap:2.5rem; align-items:center; }
-  .hero.has-portrait { grid-template-columns:1.4fr 1fr; }
-  .portrait { width:100%; max-width:22rem; aspect-ratio:4/5; object-fit:cover; border-radius:6px; justify-self:center; }
-  h1 { font-family:var(--display); font-weight:700; font-size:clamp(2.3rem,6vw,3.7rem); line-height:1.06; letter-spacing:-.02em; margin:0 0 .6rem; }
-  .role { font-family:var(--display); font-weight:500; font-size:1.35rem; color:var(--teal-dark); margin:0 0 1rem; }
-  .lede { font-size:1.2rem; color:var(--muted); max-width:34rem; margin:0 0 1.5rem; }
-  .actions { display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.5rem; }
-  .btn { font-family:var(--display); font-weight:700; font-size:1rem; padding:.7rem 1.25rem; border-radius:4px; text-decoration:none; border:2px solid var(--teal); background:var(--teal); color:#fff; }
-  .btn:hover { background:var(--teal-dark); border-color:var(--teal-dark); color:#fff; }
-  .btn.alt { background:transparent; color:var(--teal-dark); }
-  .btn.alt:hover { background:#e3edef; color:var(--teal-dark); }
+  /* Buttons */
+  .btn { display:inline-flex; align-items:center; gap:1rem; font-family:var(--font); font-size:.78rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; text-decoration:none; padding:1rem 1.4rem; border:2px solid #fff; color:#fff; background:transparent; }
+  .btn:hover { background:rgba(255,255,255,.1); }
+  .btn.solid { background:var(--brand); border-color:var(--brand); }
+  .btn.solid:hover { background:#094a87; }
+  .arr { width:1.5rem; height:1.1rem; background:var(--arrow-right) center/contain no-repeat; }
+  .arr.down { width:1.1rem; background-image:var(--arrow-down); }
 
-  section { padding:3rem 0; border-top:1px solid var(--rule); }
-  h2 { font-family:var(--display); font-size:1.7rem; letter-spacing:-.01em; margin:0 0 1.25rem; }
-  h3 { font-family:var(--display); font-size:1.15rem; margin:0 0 .3rem; }
-  p { margin:0 0 1rem; }
-  .meta { color:var(--muted); font-size:1rem; }
+  /* Hero */
+  .hero { background:var(--light); color:var(--ink); padding:5.5rem 0; }
+  .hero .wide { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; }
+  .portrait { justify-self:center; width:min(25rem,80vw); aspect-ratio:1; border-radius:50%; background:var(--ring); padding:1.7rem; }
+  .portrait .inner { position:relative; width:100%; height:100%; border-radius:50%; overflow:hidden; background:#cfdcf0; border:3px solid #fff; display:flex; align-items:center; justify-content:center; font-size:5rem; font-weight:700; color:var(--ring); }
+  .portrait img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  h1 { font-size:clamp(3.2rem,8.5vw,6.2rem); line-height:.95; letter-spacing:-.035em; font-weight:700; color:var(--brand); margin:0 0 1.6rem; }
+  .role { font-size:.95rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase; margin:0 0 1.4rem; }
+  .tagline { font-size:clamp(1.5rem,3vw,2rem); line-height:1.5; font-weight:500; margin:0 0 .9rem; max-width:24rem; }
+  .tools { font-size:.8rem; letter-spacing:.16em; text-transform:uppercase; margin:0 0 1.8rem; }
+  .tools i { font-style:normal; color:var(--brand); padding:0 .6rem; }
 
-  .chips { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:.5rem; }
-  .chips li { border:1px solid var(--rule); background:#fff; padding:.25rem .8rem; border-radius:4px; font-size:1rem; }
+  /* Sections */
+  section { padding:5rem 0; }
+  h2 { font-size:clamp(2rem,4vw,2.6rem); line-height:1.15; font-weight:700; margin:0 0 2.5rem; padding-bottom:.9rem; position:relative; }
+  h2::after { content:""; position:absolute; left:0; bottom:0; width:6rem; height:2px; background:currentColor; }
 
-  .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(15rem,1fr)); gap:1.75rem 2rem; }
-  .services p { color:var(--muted); font-size:1.02rem; margin:0; }
+  #about { background:var(--navy); }
+  #about h3 { font-size:1.5rem; margin:0 0 1.3rem; }
+  #about p { margin:0 0 1.3rem; max-width:50rem; }
+  .hl { color:var(--sky); font-weight:700; }
 
-  ul.creds { list-style:none; margin:0; padding:0; }
-  ul.creds li { position:relative; padding:.45rem 0 .45rem 2rem; }
-  ul.creds li::before { content:""; position:absolute; left:0; top:.78rem; width:1.05rem; height:1.05rem; border:2px solid var(--teal); border-radius:3px; }
-  ul.creds li.done::before { background:var(--teal); }
-  ul.creds li.done::after { content:""; position:absolute; left:.36rem; top:.86rem; width:.3rem; height:.58rem; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(40deg); }
-  .legend { font-size:.95rem; color:var(--muted); margin-top:1rem; }
+  #services { background:var(--blue); }
+  .svc { border-top:1px solid var(--line); padding:1.7rem 0; }
+  .svc:last-of-type { border-bottom:1px solid var(--line); }
+  .svc h3 { font-size:1.55rem; margin:0 0 .4rem; }
+  .svc p { margin:0; color:var(--soft); max-width:40rem; }
+  .resume { margin-top:3.5rem; max-width:28rem; border:1px dashed rgba(255,255,255,.4); padding:2rem; }
+  .label { font-size:.85rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--sky); margin:0 0 .4rem; }
+  .resume h3 { font-size:1.6rem; margin:0 0 .6rem; }
+  .resume p.t { color:var(--soft); margin:0 0 1.4rem; }
 
-  .cert-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(16rem,1fr)); gap:1.5rem; margin-top:2rem; }
-  .cert-grid figure { margin:0; }
-  .cert-grid img { width:100%; height:auto; display:block; border:1px solid var(--rule); border-radius:4px; background:#fff; }
-  .cert-grid figcaption { font-size:.95rem; color:var(--muted); margin-top:.4rem; }
-  .project-note { border-left:4px solid var(--teal); padding:.25rem 0 .25rem 1rem; max-width:40rem; }
+  #portfolio { background:var(--deep); padding-bottom:0; }
+  #portfolio .intro { color:var(--soft); margin:0 0 3rem; }
+  .row { display:grid; grid-template-columns:5fr 7fr; border-top:1px solid var(--line); }
+  .row:last-child { border-bottom:1px solid var(--line); }
+  .row .side { background:rgba(255,255,255,.035); padding:2.4rem 2rem; display:flex; align-items:center; justify-content:center; text-align:center; }
+  .row .side img { max-width:100%; height:auto; display:block; }
+  .row .side .soon { font-size:.85rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--sky); }
+  .row .body { padding:2.4rem 3rem; max-width:46rem; }
+  .row h3 { font-size:1.7rem; line-height:1.25; margin:0 0 .6rem; }
+  .row p { color:var(--soft); margin:0 0 1.3rem; }
+  .portfolio-end { height:5rem; }
 
-  footer { padding:3rem 0 3.5rem; border-top:1px solid var(--rule); }
-  footer ul { margin:0 0 1.25rem 1.1rem; padding:0; }
-  .small { color:var(--muted); font-size:.95rem; margin-top:2rem; }
+  #certs { background:var(--navy); }
+  .certs { border:1px solid var(--line); background:rgba(255,255,255,.04); }
+  .cert { display:flex; align-items:center; gap:1.5rem; padding:1.3rem 1.5rem; border-top:1px solid var(--line); }
+  .cert:first-child { border-top:0; }
+  .cert img { width:9.5rem; height:auto; border:5px solid #fff; border-radius:10px; background:#fff; flex:none; }
+  .cert p { margin:0; }
 
-  @media (max-width:46rem) { .hero.has-portrait { grid-template-columns:1fr; } .portrait { max-width:16rem; justify-self:start; } nav a { margin:0 1rem 0 0; } }
-  @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  #toolkit { background:var(--light); color:var(--ink); }
+  #toolkit .label { color:var(--ink); }
+  .tools-row { display:flex; flex-wrap:wrap; gap:2.2rem 2.8rem; }
+  .tool { width:7.5rem; text-align:center; }
+  .tile { width:4.5rem; height:4.5rem; margin:0 auto .8rem; border-radius:12px; display:flex; align-items:center; justify-content:center; font-weight:700; color:#fff; font-size:1.2rem; }
+  .tool span { display:block; font-size:.78rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+
+  #contact { background:var(--deep); padding:0; }
+  #contact .grid { display:grid; grid-template-columns:1fr 1fr; }
+  #contact .left { padding:5rem 2.5rem 5rem 0; }
+  #contact .right { padding:5rem 0 5rem 4rem; border-left:1px solid var(--line); }
+  #contact h2 { font-size:clamp(2.2rem,5vw,3.4rem); line-height:1.12; padding:0; margin:0 0 1.6rem; max-width:30rem; }
+  #contact h2::after { display:none; }
+  #contact .lead { color:var(--soft); max-width:28rem; margin:0 0 2rem; }
+  ul.list { list-style:none; margin:0 0 2rem; padding:0; max-width:26rem; color:var(--soft); }
+  ul.list li { padding:.6rem 0; border-bottom:1px solid var(--line); }
+  .item { margin-bottom:2.6rem; }
+  .item h3 { display:flex; align-items:center; gap:.7rem; font-size:1.4rem; margin:0 0 .3rem; }
+  .ic { width:1.7rem; height:1.7rem; border:1px solid var(--sky); border-radius:50%; color:var(--sky); font-size:.8rem; display:inline-flex; align-items:center; justify-content:center; font-weight:700; }
+  .item a { color:var(--soft); }
+  .item p { margin:0; color:var(--soft); }
+  footer { border-top:1px solid var(--line); padding:2rem 0; color:#7f93b0; font-size:.9rem; }
+
+  @media (max-width:52rem) {
+    .hero .wide { grid-template-columns:1fr; text-align:left; }
+    .row { grid-template-columns:1fr; }
+    .row .body { padding:2rem 1.5rem; }
+    #contact .grid { grid-template-columns:1fr; }
+    #contact .left { padding:4rem 0 2rem; }
+    #contact .right { padding:2rem 0 4rem; border-left:0; border-top:1px solid var(--line); }
+    .cert { flex-direction:column; align-items:flex-start; }
+    .nav ul { gap:.4rem 1.3rem; }
+  }
 </style>
 </head>
 <body>
 
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="#home">Margaret Muthoni</a>
-    <nav aria-label="Main">
-      <a href="#about">About</a>
-      <a href="#what-i-do">What I do</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#credentials">Credentials</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+<nav class="nav" aria-label="Main">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<main id="home">
-  <div class="wrap">
-    <div class="hero has-portrait" id="hero">
-      <div>
-        <h1>Margaret Muthoni</h1>
-        <p class="role">Financial and Programme Analyst</p>
-        <p class="lede">I test where money goes and show what it delivers.</p>
-        <ul class="chips" aria-label="Tools">
-          <li>Power BI</li><li>SQL</li><li>Advanced Excel</li><li>Financial modelling</li>
-        </ul>
-        <div class="actions">
-          <a class="btn" href="#portfolio">Explore my work</a>
-          <a class="btn alt" href="cv.pdf">Download my CV</a>
+<main>
+  <section class="hero" id="home" style="padding:5.5rem 0;">
+    <div class="wide">
+      <div class="portrait">
+        <div class="inner">MM
+          <!-- Add portrait.jpg to the repository to replace the initials. -->
+          <img src="portrait.jpg" alt="Portrait of Margaret Muthoni" onerror="this.remove()">
         </div>
       </div>
-      <!-- Add a file named portrait.jpg to the repo to show your photo. Without it, this is hidden. -->
-      <img class="portrait" src="portrait.jpg" alt="Portrait of Margaret Muthoni" onerror="this.remove();document.getElementById('hero').classList.remove('has-portrait');">
+      <div>
+        <h1>Margaret<br>Muthoni</h1>
+        <p class="role">Financial &amp; Programme Analyst</p>
+        <p class="tagline">I test where money goes and show what it delivers.</p>
+        <p class="tools">Power BI<i>|</i>SQL<i>|</i>Excel<i>|</i>Power Query</p>
+        <a class="btn solid" href="#portfolio">Explore my work <span class="arr down"></span></a>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="wrap">
-    <section id="about">
-      <div class="narrow">
-        <h2>About</h2>
-        <p>I spent two years in assurance at PwC Kenya, auditing donor-funded and public sector programmes. I tested expenditure and procurement against evidence, followed up exceptions, and reported control weaknesses to management. As a senior associate I led audit teams of 3 to 5 people.</p>
-        <p>That work left me with one habit: I want to know what happened to the money after it was approved, and whether it did what it was meant to do. Data tools let me answer that faster and show it more clearly.</p>
-        <p>I pair that background with Power BI, SQL and advanced Excel, and I'm building case studies that turn programme and financial data into dashboards people can act on. I'm based in Nairobi and looking for financial analyst, programme analytics and MEL roles with development organisations and NGOs.</p>
+  <section id="about">
+    <div class="wrap">
+      <h3>Hi, I'm Margaret Muthoni</h3>
+      <p>I like knowing where the money went. After it is approved and spent, did it do what it was meant to do?</p>
+      <p>I started in audit. For two years at PwC Kenya I tested expenditure, procurement and supporting evidence on donor-funded and public sector programmes, followed up exceptions, and reported control weaknesses to management. As a senior associate I led audit teams of 3 to 5 people.</p>
+      <p>That work left me curious about what sits behind the numbers: which spending is off track, which records don't match, and which patterns are easy to miss. Power BI, SQL and advanced Excel let me answer those questions faster and show the answers clearly.</p>
+      <p>I'm building my career around one idea: <span class="hl">testing where money goes and showing what it delivers.</span></p>
+      <a class="btn" href="#contact">Let's work together <span class="arr"></span></a>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <h2>What I Do</h2>
+      <div class="svc"><h3>Financial &amp; Programme Analysis</h3><p>Compare budgets with actual spend, find variances, and explain what is driving them.</p></div>
+      <div class="svc"><h3>Audit &amp; Assurance</h3><p>Test transactions against supporting evidence, investigate exceptions, and report control weaknesses.</p></div>
+      <div class="svc"><h3>Dashboard Development</h3><p>Build Power BI and Excel dashboards that let managers monitor KPIs and spot problems early.</p></div>
+      <div class="svc"><h3>Data Cleaning &amp; Validation</h3><p>Reconcile records and fix inconsistencies with Power Query and Excel so the analysis can be trusted.</p></div>
+      <div class="resume">
+        <p class="label">Resume</p>
+        <h3>My Resume</h3>
+        <p class="t">Download my latest resume for a summary of my experience and technical background.</p>
+        <a class="btn" href="cv.pdf">View resume <span class="arr"></span></a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="what-i-do">
-      <h2>What I do</h2>
-      <div class="services">
-        <div><h3>Financial and programme analysis</h3><p>Compare budgets with actual spend, find variances, and explain what is driving them.</p></div>
-        <div><h3>Audit and assurance</h3><p>Test transactions against supporting evidence, investigate exceptions and report control weaknesses.</p></div>
-        <div><h3>Dashboards and reporting</h3><p>Build Power BI and Excel reports that let managers monitor KPIs and spot problems early.</p></div>
-        <div><h3>Data cleaning and validation</h3><p>Reconcile records and fix inconsistencies with Power Query and Excel so the analysis can be trusted.</p></div>
-      </div>
-    </section>
-
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>A summary of my experience, education and technical skills.</p>
-      <a class="btn" href="cv.pdf">Download my CV</a>
-    </section>
-
-    <section id="portfolio">
+  <section id="portfolio">
+    <div class="wrap">
       <h2>Portfolio</h2>
-      <!-- When project 1 is live, replace this block with a project block (image, title, description, link). -->
-      <div class="project-note">
-        <p>My first case study is a budget versus actual dashboard for donor-funded programmes, built on public data. It will include the live report and a short video walkthrough.</p>
-        <p class="meta">Publishing: December 2026</p>
+      <p class="intro">A growing collection of dashboards and analyses built to make programme and financial data easier to use.</p>
+    </div>
+    <!-- When project 1 is live, replace this row with: <div class="row"><div class="side"><img src="project-1.png" alt="..."></div><div class="body"><h3>Title</h3><p>Description</p><a class="btn" href="project-1.html">View project <span class="arr"></span></a></div></div> -->
+    <div class="row">
+      <div class="side"><span class="soon">In progress</span></div>
+      <div class="body">
+        <h3>Donor-Funded Programme Budget vs Actual Dashboard</h3>
+        <p>A Power BI analysis of budget against actual spend on donor-funded programmes, using public data. It will include the live report and a short video walkthrough.</p>
+        <p class="label" style="margin:0">Publishing: December 2026</p>
       </div>
-    </section>
+    </div>
+    <div class="portfolio-end"></div>
+  </section>
 
-    <section id="credentials">
-      <h2>Education and credentials</h2>
-      <ul class="creds">
-        <li class="done">Bachelor of Economics and Statistics, University of Nairobi (2022)</li>
-        <li class="done">Financial Modeling and Valuation Analyst (FMVA), Corporate Finance Institute</li>
-        <li class="done">Data Analytics Programme, ALX Africa (2024)</li>
-        <li class="done">Introduction to Data Protection, Strathmore University CIPIT (2026)</li>
-        <li>CPA(K), KASNEB: Intermediate Level in progress</li>
-      </ul>
-      <p class="legend">A filled box means completed. An empty box means in progress.</p>
-      <!-- Certificate images: put PNG or JPG files in a folder named certificates in the repo, named exactly as below. Missing files are hidden. -->
-      <div class="cert-grid">
-        <figure data-cert><img src="certificates/fmva.png" alt="FMVA certificate from Corporate Finance Institute" loading="lazy"><figcaption>FMVA, Corporate Finance Institute</figcaption></figure>
-        <figure data-cert><img src="certificates/alx-data-analytics.png" alt="Data Analytics Programme certificate from ALX Africa" loading="lazy"><figcaption>Data Analytics Programme, ALX Africa</figcaption></figure>
-        <figure data-cert><img src="certificates/strathmore-data-protection.png" alt="Introduction to Data Protection certificate from Strathmore University" loading="lazy"><figcaption>Introduction to Data Protection, Strathmore University</figcaption></figure>
+  <section id="certs">
+    <div class="wrap">
+      <h2>Education &amp; Certifications</h2>
+      <div class="certs">
+        <div class="cert"><p>&bull; Bachelor of Economics and Statistics | University of Nairobi (2022)</p></div>
+        <div class="cert"><p>&bull; Certified Public Accountant (CPA-K), Intermediate Level in progress | KASNEB</p></div>
+        <div class="cert" data-cert><img src="certificates/fmva.png" alt="FMVA certificate"><p>&bull; Financial Modeling &amp; Valuation Analyst (FMVA) | Corporate Finance Institute</p></div>
+        <div class="cert" data-cert><img src="certificates/alx-data-analytics.png" alt="ALX Data Analytics certificate"><p>&bull; Data Analytics Programme | ALX Africa (2024)</p></div>
+        <div class="cert" data-cert><img src="certificates/strathmore-data-protection.png" alt="Strathmore data protection certificate"><p>&bull; Introduction to Data Protection | Strathmore University CIPIT (2026)</p></div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+
+  <section id="toolkit">
+    <div class="wrap">
+      <p class="label">The Toolkit</p>
+      <h2>Tools I use to make sense of things</h2>
+      <div class="tools-row">
+        <div class="tool"><div class="tile" style="background:#1e7145">X</div><span>Excel</span></div>
+        <div class="tool"><div class="tile" style="background:#107c41;font-size:1rem">PQ</div><span>Power Query</span></div>
+        <div class="tool"><div class="tile" style="background:#f2c811"><svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="4" y="14" width="7" height="16" rx="1.5" fill="#b8860b"/><rect x="13.5" y="7" width="7" height="23" rx="1.5" fill="#8a6508"/><rect x="23" y="2" width="7" height="28" rx="1.5" fill="#5c4305"/></svg></div><span>Power BI</span></div>
+        <div class="tool"><div class="tile" style="background:#0b559b;font-size:1rem">SQL</div><span>SQL</span></div>
+        <div class="tool"><div class="tile" style="background:#4285f4;font-size:1rem">LS</div><span>Looker Studio</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap" style="max-width:62rem">
+      <div class="grid">
+        <div class="left">
+          <h2>Let's make something useful.</h2>
+          <p class="lead">Have programme or financial data that needs a clearer answer?</p>
+          <ul class="list">
+            <li>Financial and programme analysis</li>
+            <li>Power BI and Excel dashboards</li>
+            <li>Data cleaning and reporting</li>
+          </ul>
+          <a class="btn" href="mailto:margaret_muthoni@outlook.com">Send me an email <span class="arr"></span></a>
+        </div>
+        <div class="right">
+          <div class="item"><h3><span class="ic">@</span>Email</h3><a href="mailto:margaret_muthoni@outlook.com">margaret_muthoni@outlook.com</a></div>
+          <div class="item"><h3><span class="ic">in</span>LinkedIn</h3><a href="https://www.linkedin.com/in/margaret-nyambura/">linkedin.com/in/margaret-nyambura</a></div>
+          <div class="item"><h3><span class="ic">&#8962;</span>Based in</h3><p>Nairobi, Kenya</p></div>
+        </div>
+      </div>
+    </div>
+    <footer><div class="wrap" style="max-width:62rem">&copy; 2026 Margaret Muthoni. Built with curiosity.</div></footer>
+  </section>
 </main>
 
-<footer id="contact">
-  <div class="wrap">
-    <div class="narrow">
-      <h2>Let's talk about your data.</h2>
-      <p>If you have programme or financial data that needs a clearer answer, I'd like to hear about it.</p>
-      <ul>
-        <li>Financial and programme analysis</li>
-        <li>Power BI and Excel dashboards</li>
-        <li>Data cleaning and reporting</li>
-      </ul>
-      <p>Email: <a href="mailto:margaret_muthoni@outlook.com">margaret_muthoni@outlook.com</a><br>
-      LinkedIn: <a href="https://www.linkedin.com/in/margaret-nyambura/">linkedin.com/in/margaret-nyambura</a><br>
-      Based in Nairobi, Kenya</p>
-      <p class="small">&copy; 2026 Margaret Muthoni</p>
-    </div>
-  </div>
-</footer>
-
 <script>
-  // Certificate images: try .png, then .jpg, then hide the card if neither exists.
+  // Certificate images: try .png, then .jpg, then remove the image if neither exists.
   document.querySelectorAll('[data-cert] img').forEach(function (img) {
     img.addEventListener('error', function () {
       if (!img.dataset.retried) {
         img.dataset.retried = '1';
         img.src = img.getAttribute('src').replace(/\.png$/, '.jpg');
       } else {
-        img.closest('figure').remove();
+        img.remove();
       }
     });
   });
